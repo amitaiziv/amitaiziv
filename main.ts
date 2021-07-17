@@ -1,5 +1,8 @@
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("Hello!")
+})
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(1)
+    basic.showNumber(2)
     basic.showLeds(`
         . # # # .
         . . # . .
@@ -7,18 +10,6 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         . # # # .
         `)
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showNumber(1)
-    basic.showLeds(`
-        # . . . #
-        # . . . #
-        # . . . #
-        # . . . #
-        # # # # #
-        `)
-})
-input.onButtonPressed(Button.B, function () {
     basic.showNumber(2)
     basic.showLeds(`
         # # . # #
@@ -26,6 +17,14 @@ input.onButtonPressed(Button.B, function () {
         # # # # #
         . # # # .
         . . # . .
+        `)
+    basic.showNumber(2)
+    basic.showLeds(`
+        # . . . #
+        # . . . #
+        # . . . #
+        # . . . #
+        # # # # #
         `)
 })
 basic.showLeds(`
@@ -45,6 +44,7 @@ basic.showLeds(`
     . . . . .
     `)
 basic.forever(function () {
+    basic.showString("dadi")
     basic.showLeds(`
         . . . . .
         . # . # .
@@ -52,5 +52,5 @@ basic.forever(function () {
         . # . # .
         . . # . .
         `)
-    basic.showIcon(IconNames.Duck)
+    basic.showString("mumi")
 })
