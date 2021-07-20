@@ -1,5 +1,7 @@
 input.onGesture(Gesture.Shake, function () {
-    basic.showString("Hello!")
+    for (let index = 0; index < 10; index++) {
+        basic.showString("hi")
+    }
 })
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(2)
@@ -26,6 +28,14 @@ input.onButtonPressed(Button.A, function () {
         # . . . #
         # # # # #
         `)
+})
+input.onButtonPressed(Button.AB, function () {
+    for (let index = 0; index < 4; index++) {
+        music.playTone(131, music.beat(BeatFraction.Whole))
+        music.playTone(988, music.beat(BeatFraction.Whole))
+        music.playTone(131, music.beat(BeatFraction.Whole))
+        music.playTone(988, music.beat(BeatFraction.Whole))
+    }
 })
 basic.showLeds(`
     . . . . .
